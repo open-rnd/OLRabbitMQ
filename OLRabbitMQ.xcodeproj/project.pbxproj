@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84EED7981ABFE5B600FCE403 /* OLRabbitMQ.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84EED7971ABFE5B600FCE403 /* OLRabbitMQ.h */; };
+		84EED7A01ABFE5B600FCE403 /* libOLRabbitMQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EED7941ABFE5B600FCE403 /* libOLRabbitMQ.a */; };
+		84EED7B81ABFE68300FCE403 /* OLRabbitMQError.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7AF1ABFE68300FCE403 /* OLRabbitMQError.m */; };
+		84EED7B91ABFE68300FCE403 /* OLRabbitMQExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7B11ABFE68300FCE403 /* OLRabbitMQExchange.m */; };
+		84EED7BA1ABFE68300FCE403 /* OLRabbitMQManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7B31ABFE68300FCE403 /* OLRabbitMQManager.m */; };
+		84EED7BB1ABFE68300FCE403 /* OLRabbitMQOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7B51ABFE68300FCE403 /* OLRabbitMQOperation.m */; };
+		84EED7BC1ABFE68300FCE403 /* OLRabbitMQSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7B71ABFE68300FCE403 /* OLRabbitMQSocket.m */; };
+		84EED7C21ABFE82C00FCE403 /* librabbitmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EED7BE1ABFE82C00FCE403 /* librabbitmq.a */; };
+		84EED7CB1ABFE9F900FCE403 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7C91ABFE9F900FCE403 /* utils.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84EED7A11ABFE5B600FCE403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84EED78C1ABFE5B600FCE403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84EED7931ABFE5B600FCE403;
+			remoteInfo = OLRabbitmq;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84EED7921ABFE5B600FCE403 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				84EED7981ABFE5B600FCE403 /* OLRabbitMQ.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		84EED7941ABFE5B600FCE403 /* libOLRabbitMQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOLRabbitMQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EED7971ABFE5B600FCE403 /* OLRabbitMQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLRabbitMQ.h; sourceTree = "<group>"; };
+		84EED79F1ABFE5B600FCE403 /* OLRabbitMQ.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OLRabbitMQ.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EED7A51ABFE5B600FCE403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EED7AE1ABFE68300FCE403 /* OLRabbitMQError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = OLRabbitMQError.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		84EED7AF1ABFE68300FCE403 /* OLRabbitMQError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OLRabbitMQError.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		84EED7B01ABFE68300FCE403 /* OLRabbitMQExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLRabbitMQExchange.h; sourceTree = "<group>"; };
+		84EED7B11ABFE68300FCE403 /* OLRabbitMQExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLRabbitMQExchange.m; sourceTree = "<group>"; };
+		84EED7B21ABFE68300FCE403 /* OLRabbitMQManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLRabbitMQManager.h; sourceTree = "<group>"; };
+		84EED7B31ABFE68300FCE403 /* OLRabbitMQManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLRabbitMQManager.m; sourceTree = "<group>"; };
+		84EED7B41ABFE68300FCE403 /* OLRabbitMQOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLRabbitMQOperation.h; sourceTree = "<group>"; };
+		84EED7B51ABFE68300FCE403 /* OLRabbitMQOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OLRabbitMQOperation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		84EED7B61ABFE68300FCE403 /* OLRabbitMQSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = OLRabbitMQSocket.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		84EED7B71ABFE68300FCE403 /* OLRabbitMQSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OLRabbitMQSocket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		84EED7BE1ABFE82C00FCE403 /* librabbitmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librabbitmq.a; sourceTree = "<group>"; };
+		84EED7C91ABFE9F900FCE403 /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
+		84EED7CA1ABFE9F900FCE403 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84EED7911ABFE5B600FCE403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EED7C21ABFE82C00FCE403 /* librabbitmq.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EED79C1ABFE5B600FCE403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EED7A01ABFE5B600FCE403 /* libOLRabbitMQ.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84EED78B1ABFE5B600FCE403 = {
+			isa = PBXGroup;
+			children = (
+				84EED7BD1ABFE6B200FCE403 /* rabbitmq-c */,
+				84EED7961ABFE5B600FCE403 /* OLRabbitMQ */,
+				84EED7A31ABFE5B600FCE403 /* OLRabbitMQTests */,
+				84EED7951ABFE5B600FCE403 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84EED7951ABFE5B600FCE403 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84EED7941ABFE5B600FCE403 /* libOLRabbitMQ.a */,
+				84EED79F1ABFE5B600FCE403 /* OLRabbitMQ.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84EED7961ABFE5B600FCE403 /* OLRabbitMQ */ = {
+			isa = PBXGroup;
+			children = (
+				84EED7AE1ABFE68300FCE403 /* OLRabbitMQError.h */,
+				84EED7AF1ABFE68300FCE403 /* OLRabbitMQError.m */,
+				84EED7B01ABFE68300FCE403 /* OLRabbitMQExchange.h */,
+				84EED7B11ABFE68300FCE403 /* OLRabbitMQExchange.m */,
+				84EED7B21ABFE68300FCE403 /* OLRabbitMQManager.h */,
+				84EED7B31ABFE68300FCE403 /* OLRabbitMQManager.m */,
+				84EED7B41ABFE68300FCE403 /* OLRabbitMQOperation.h */,
+				84EED7B51ABFE68300FCE403 /* OLRabbitMQOperation.m */,
+				84EED7B61ABFE68300FCE403 /* OLRabbitMQSocket.h */,
+				84EED7B71ABFE68300FCE403 /* OLRabbitMQSocket.m */,
+				84EED7971ABFE5B600FCE403 /* OLRabbitMQ.h */,
+			);
+			name = OLRabbitMQ;
+			path = OLRabbitmq;
+			sourceTree = "<group>";
+		};
+		84EED7A31ABFE5B600FCE403 /* OLRabbitMQTests */ = {
+			isa = PBXGroup;
+			children = (
+				84EED7A41ABFE5B600FCE403 /* Supporting Files */,
+			);
+			name = OLRabbitMQTests;
+			path = OLRabbitmqTests;
+			sourceTree = "<group>";
+		};
+		84EED7A41ABFE5B600FCE403 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84EED7A51ABFE5B600FCE403 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84EED7BD1ABFE6B200FCE403 /* rabbitmq-c */ = {
+			isa = PBXGroup;
+			children = (
+				84EED7C91ABFE9F900FCE403 /* utils.c */,
+				84EED7CA1ABFE9F900FCE403 /* utils.h */,
+				84EED7BE1ABFE82C00FCE403 /* librabbitmq.a */,
+			);
+			path = "rabbitmq-c";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84EED7931ABFE5B600FCE403 /* OLRabbitMQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84EED7A81ABFE5B600FCE403 /* Build configuration list for PBXNativeTarget "OLRabbitMQ" */;
+			buildPhases = (
+				84EED7901ABFE5B600FCE403 /* Sources */,
+				84EED7911ABFE5B600FCE403 /* Frameworks */,
+				84EED7921ABFE5B600FCE403 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OLRabbitMQ;
+			productName = OLRabbitmq;
+			productReference = 84EED7941ABFE5B600FCE403 /* libOLRabbitMQ.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84EED79E1ABFE5B600FCE403 /* OLRabbitMQTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84EED7AB1ABFE5B600FCE403 /* Build configuration list for PBXNativeTarget "OLRabbitMQTests" */;
+			buildPhases = (
+				84EED79B1ABFE5B600FCE403 /* Sources */,
+				84EED79C1ABFE5B600FCE403 /* Frameworks */,
+				84EED79D1ABFE5B600FCE403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84EED7A21ABFE5B600FCE403 /* PBXTargetDependency */,
+			);
+			name = OLRabbitMQTests;
+			productName = OLRabbitmqTests;
+			productReference = 84EED79F1ABFE5B600FCE403 /* OLRabbitMQ.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84EED78C1ABFE5B600FCE403 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Open-RnD";
+				TargetAttributes = {
+					84EED7931ABFE5B600FCE403 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					84EED79E1ABFE5B600FCE403 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 84EED78F1ABFE5B600FCE403 /* Build configuration list for PBXProject "OLRabbitMQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84EED78B1ABFE5B600FCE403;
+			productRefGroup = 84EED7951ABFE5B600FCE403 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84EED7931ABFE5B600FCE403 /* OLRabbitMQ */,
+				84EED79E1ABFE5B600FCE403 /* OLRabbitMQTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84EED79D1ABFE5B600FCE403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84EED7901ABFE5B600FCE403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EED7CB1ABFE9F900FCE403 /* utils.c in Sources */,
+				84EED7BC1ABFE68300FCE403 /* OLRabbitMQSocket.m in Sources */,
+				84EED7BB1ABFE68300FCE403 /* OLRabbitMQOperation.m in Sources */,
+				84EED7B81ABFE68300FCE403 /* OLRabbitMQError.m in Sources */,
+				84EED7BA1ABFE68300FCE403 /* OLRabbitMQManager.m in Sources */,
+				84EED7B91ABFE68300FCE403 /* OLRabbitMQExchange.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84EED79B1ABFE5B600FCE403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84EED7A21ABFE5B600FCE403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84EED7931ABFE5B600FCE403 /* OLRabbitMQ */;
+			targetProxy = 84EED7A11ABFE5B600FCE403 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		84EED7A61ABFE5B600FCE403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/rabbitmq-c/include";
+			};
+			name = Debug;
+		};
+		84EED7A71ABFE5B600FCE403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/rabbitmq-c/include";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84EED7A91ABFE5B600FCE403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rabbitmq-c",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = OLRabbitMQ;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/rabbitmq-c/include/**";
+			};
+			name = Debug;
+		};
+		84EED7AA1ABFE5B600FCE403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/rabbitmq-c",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = OLRabbitMQ;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/rabbitmq-c/include/**";
+			};
+			name = Release;
+		};
+		84EED7AC1ABFE5B600FCE403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OLRabbitmqTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = OLRabbitMQ;
+			};
+			name = Debug;
+		};
+		84EED7AD1ABFE5B600FCE403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OLRabbitmqTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = OLRabbitMQ;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84EED78F1ABFE5B600FCE403 /* Build configuration list for PBXProject "OLRabbitMQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84EED7A61ABFE5B600FCE403 /* Debug */,
+				84EED7A71ABFE5B600FCE403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84EED7A81ABFE5B600FCE403 /* Build configuration list for PBXNativeTarget "OLRabbitMQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84EED7A91ABFE5B600FCE403 /* Debug */,
+				84EED7AA1ABFE5B600FCE403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84EED7AB1ABFE5B600FCE403 /* Build configuration list for PBXNativeTarget "OLRabbitMQTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84EED7AC1ABFE5B600FCE403 /* Debug */,
+				84EED7AD1ABFE5B600FCE403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84EED78C1ABFE5B600FCE403 /* Project object */;
+}
