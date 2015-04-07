@@ -10,6 +10,8 @@
 	<string>OLRabbitMQ</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>016AA01BC73FBF89024E7000B39A5E44DA8D45FE</key>
+		<string>github.com:open-rnd/OLRabbitMQ.git</string>
 		<key>0E422355C10805BB6BCF2C30AB40A48042F5CCEC</key>
 		<string>ssh://git.open-rnd.net:29418/open-rnd.ios.OLRabbitmq</string>
 	</dict>
@@ -17,17 +19,27 @@
 	<string>OLRabbitMQ.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0E422355C10805BB6BCF2C30AB40A48042F5CCEC</key>
+		<key>016AA01BC73FBF89024E7000B39A5E44DA8D45FE</key>
 		<string>../..</string>
+		<key>0E422355C10805BB6BCF2C30AB40A48042F5CCEC</key>
+		<string>../../../open-rnd.ios.OLRabbitmq</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://git.open-rnd.net:29418/open-rnd.ios.OLRabbitmq</string>
+	<string>github.com:open-rnd/OLRabbitMQ.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0E422355C10805BB6BCF2C30AB40A48042F5CCEC</string>
+	<string>016AA01BC73FBF89024E7000B39A5E44DA8D45FE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>016AA01BC73FBF89024E7000B39A5E44DA8D45FE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OLRabbitMQ</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

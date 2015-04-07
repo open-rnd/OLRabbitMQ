@@ -9,15 +9,15 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/open-rnd/OLRabbitMQ", :tag => s.version }
+  s.source       = { :git => "https://github.com/open-rnd/OLRabbitMQ.git", :tag => s.version }
   s.public_header_files = 'OLRabbitMQ/*.h'
   s.source_files = 'OLRabbitMQ/OLRabbitMQ.h'
   
-  s.preserve_paths = 'rabbitmq-c/librabbitmq.a' 
-  s.vendored_libraries = 'rabbitmq-c/librabbitmq.a'
+  s.preserve_paths = 'rabbitmq-c/include/.*h' 
+  s.vendored_libraries = 'rabbitmq-c/rabbitmq.a'
   s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/OLRabbitMQ/rabbitmq-c"',
-                   'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/OLRabbitMQ/rabbbitmq-c/include"' } 
-  s.libraries = 'librabbitmq'
+                   'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/OLRabbitMQ/rabbbitmq-c/include"' } 
+  s.libraries = 'rabbitmq'
 
   s.subspec 'OLRabbitMQ' do |ss|
 	ss.source_files = 'OLRabbitMQ/*.{h,m}'
