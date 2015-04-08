@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84C0FD891AD4F21F00073220 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C0FD881AD4F21F00073220 /* main.m */; };
+		84C0FD8C1AD4F21F00073220 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C0FD8B1AD4F21F00073220 /* AppDelegate.m */; };
+		84C0FD921AD4F21F00073220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C0FD901AD4F21F00073220 /* Main.storyboard */; };
+		84C0FD941AD4F21F00073220 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C0FD931AD4F21F00073220 /* Images.xcassets */; };
+		84C0FD971AD4F21F00073220 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C0FD951AD4F21F00073220 /* LaunchScreen.xib */; };
+		84C0FDB21AD4F28700073220 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C0FDAF1AD4F28700073220 /* ViewController.m */; };
+		A927847B1AD50E3B00D6D92E /* libOLRabbitMQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A92784761AD509E500D6D92E /* libOLRabbitMQ.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A92784751AD509E500D6D92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84EED7941ABFE5B600FCE403;
+			remoteInfo = OLRabbitMQ;
+		};
+		A92784771AD509E500D6D92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84EED79F1ABFE5B600FCE403;
+			remoteInfo = OLRabbitMQTests;
+		};
+		A92784791AD50CB200D6D92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 84EED7931ABFE5B600FCE403;
+			remoteInfo = OLRabbitMQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84C0FD831AD4F21F00073220 /* OLRabbitMQ Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OLRabbitMQ Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C0FD871AD4F21F00073220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C0FD881AD4F21F00073220 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84C0FD8A1AD4F21F00073220 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84C0FD8B1AD4F21F00073220 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84C0FD911AD4F21F00073220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84C0FD931AD4F21F00073220 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84C0FD961AD4F21F00073220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		84C0FDAE1AD4F28700073220 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84C0FDAF1AD4F28700073220 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OLRabbitMQ.xcodeproj; path = ../OLRabbitMQ.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84C0FD801AD4F21F00073220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A927847B1AD50E3B00D6D92E /* libOLRabbitMQ.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84C0FD7A1AD4F21F00073220 = {
+			isa = PBXGroup;
+			children = (
+				A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */,
+				84C0FD851AD4F21F00073220 /* OLRabbitMQ Example */,
+				84C0FD841AD4F21F00073220 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84C0FD841AD4F21F00073220 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84C0FD831AD4F21F00073220 /* OLRabbitMQ Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84C0FD851AD4F21F00073220 /* OLRabbitMQ Example */ = {
+			isa = PBXGroup;
+			children = (
+				84C0FDAC1AD4F28700073220 /* Classes */,
+				84C0FD8A1AD4F21F00073220 /* AppDelegate.h */,
+				84C0FD8B1AD4F21F00073220 /* AppDelegate.m */,
+				84C0FD901AD4F21F00073220 /* Main.storyboard */,
+				84C0FD931AD4F21F00073220 /* Images.xcassets */,
+				84C0FD951AD4F21F00073220 /* LaunchScreen.xib */,
+				84C0FD861AD4F21F00073220 /* Supporting Files */,
+			);
+			path = "OLRabbitMQ Example";
+			sourceTree = "<group>";
+		};
+		84C0FD861AD4F21F00073220 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84C0FD871AD4F21F00073220 /* Info.plist */,
+				84C0FD881AD4F21F00073220 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84C0FDAC1AD4F28700073220 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84C0FDAD1AD4F28700073220 /* Controllers */,
+				84C0FDB01AD4F28700073220 /* Models */,
+				84C0FDB11AD4F28700073220 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		84C0FDAD1AD4F28700073220 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84C0FDAE1AD4F28700073220 /* ViewController.h */,
+				84C0FDAF1AD4F28700073220 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84C0FDB01AD4F28700073220 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84C0FDB11AD4F28700073220 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A92784711AD509E500D6D92E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A92784761AD509E500D6D92E /* libOLRabbitMQ.a */,
+				A92784781AD509E500D6D92E /* OLRabbitMQ.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84C0FD821AD4F21F00073220 /* OLRabbitMQ Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C0FDA61AD4F21F00073220 /* Build configuration list for PBXNativeTarget "OLRabbitMQ Example" */;
+			buildPhases = (
+				84C0FD7F1AD4F21F00073220 /* Sources */,
+				84C0FD801AD4F21F00073220 /* Frameworks */,
+				84C0FD811AD4F21F00073220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A927847A1AD50CB200D6D92E /* PBXTargetDependency */,
+			);
+			name = "OLRabbitMQ Example";
+			productName = "OLRabbitMQ Example";
+			productReference = 84C0FD831AD4F21F00073220 /* OLRabbitMQ Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84C0FD7B1AD4F21F00073220 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = OpenRnD;
+				TargetAttributes = {
+					84C0FD821AD4F21F00073220 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 84C0FD7E1AD4F21F00073220 /* Build configuration list for PBXProject "OLRabbitMQ Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84C0FD7A1AD4F21F00073220;
+			productRefGroup = 84C0FD841AD4F21F00073220 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A92784711AD509E500D6D92E /* Products */;
+					ProjectRef = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				84C0FD821AD4F21F00073220 /* OLRabbitMQ Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A92784761AD509E500D6D92E /* libOLRabbitMQ.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOLRabbitMQ.a;
+			remoteRef = A92784751AD509E500D6D92E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A92784781AD509E500D6D92E /* OLRabbitMQ.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OLRabbitMQ.xctest;
+			remoteRef = A92784771AD509E500D6D92E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84C0FD811AD4F21F00073220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C0FD921AD4F21F00073220 /* Main.storyboard in Resources */,
+				84C0FD971AD4F21F00073220 /* LaunchScreen.xib in Resources */,
+				84C0FD941AD4F21F00073220 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84C0FD7F1AD4F21F00073220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C0FDB21AD4F28700073220 /* ViewController.m in Sources */,
+				84C0FD8C1AD4F21F00073220 /* AppDelegate.m in Sources */,
+				84C0FD891AD4F21F00073220 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A927847A1AD50CB200D6D92E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OLRabbitMQ;
+			targetProxy = A92784791AD50CB200D6D92E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84C0FD901AD4F21F00073220 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84C0FD911AD4F21F00073220 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84C0FD951AD4F21F00073220 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84C0FD961AD4F21F00073220 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84C0FDA41AD4F21F00073220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../rabbitmq-c/include",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../OLRabbitMQ/";
+			};
+			name = Debug;
+		};
+		84C0FDA51AD4F21F00073220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../rabbitmq-c/include",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../OLRabbitMQ/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84C0FDA71AD4F21F00073220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "OLRabbitMQ Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84C0FDA81AD4F21F00073220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "OLRabbitMQ Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84C0FD7E1AD4F21F00073220 /* Build configuration list for PBXProject "OLRabbitMQ Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C0FDA41AD4F21F00073220 /* Debug */,
+				84C0FDA51AD4F21F00073220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84C0FDA61AD4F21F00073220 /* Build configuration list for PBXNativeTarget "OLRabbitMQ Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C0FDA71AD4F21F00073220 /* Debug */,
+				84C0FDA81AD4F21F00073220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84C0FD7B1AD4F21F00073220 /* Project object */;
+}

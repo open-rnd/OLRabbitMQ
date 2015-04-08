@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84C0FDBF1AD4F38B00073220 /* rabbitmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C0FDBE1AD4F38B00073220 /* rabbitmq.a */; };
+		84C0FDC61AD4FC4700073220 /* OLRabbitMQError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84EED7AE1ABFE68300FCE403 /* OLRabbitMQError.h */; };
+		84C0FDC71AD4FC4700073220 /* OLRabbitMQExchange.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84EED7B01ABFE68300FCE403 /* OLRabbitMQExchange.h */; };
+		84C0FDC81AD4FC4700073220 /* OLRabbitMQManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84EED7B21ABFE68300FCE403 /* OLRabbitMQManager.h */; };
+		84C0FDC91AD4FC4700073220 /* OLRabbitMQOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84EED7B41ABFE68300FCE403 /* OLRabbitMQOperation.h */; };
+		84C0FDCA1AD4FC4700073220 /* OLRabbitMQSocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84EED7B61ABFE68300FCE403 /* OLRabbitMQSocket.h */; };
 		84EED7981ABFE5B600FCE403 /* OLRabbitMQ.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84EED7971ABFE5B600FCE403 /* OLRabbitMQ.h */; };
 		84EED7A01ABFE5B600FCE403 /* libOLRabbitMQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EED7941ABFE5B600FCE403 /* libOLRabbitMQ.a */; };
 		84EED7B81ABFE68300FCE403 /* OLRabbitMQError.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7AF1ABFE68300FCE403 /* OLRabbitMQError.m */; };
@@ -14,7 +20,6 @@
 		84EED7BA1ABFE68300FCE403 /* OLRabbitMQManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7B31ABFE68300FCE403 /* OLRabbitMQManager.m */; };
 		84EED7BB1ABFE68300FCE403 /* OLRabbitMQOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7B51ABFE68300FCE403 /* OLRabbitMQOperation.m */; };
 		84EED7BC1ABFE68300FCE403 /* OLRabbitMQSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7B71ABFE68300FCE403 /* OLRabbitMQSocket.m */; };
-		84EED7C21ABFE82C00FCE403 /* librabbitmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EED7BE1ABFE82C00FCE403 /* librabbitmq.a */; };
 		84EED7CB1ABFE9F900FCE403 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 84EED7C91ABFE9F900FCE403 /* utils.c */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,11 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				84C0FDC61AD4FC4700073220 /* OLRabbitMQError.h in CopyFiles */,
+				84C0FDC71AD4FC4700073220 /* OLRabbitMQExchange.h in CopyFiles */,
+				84C0FDC81AD4FC4700073220 /* OLRabbitMQManager.h in CopyFiles */,
+				84C0FDC91AD4FC4700073220 /* OLRabbitMQOperation.h in CopyFiles */,
+				84C0FDCA1AD4FC4700073220 /* OLRabbitMQSocket.h in CopyFiles */,
 				84EED7981ABFE5B600FCE403 /* OLRabbitMQ.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84C0FDBE1AD4F38B00073220 /* rabbitmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = rabbitmq.a; sourceTree = "<group>"; };
 		84EED7941ABFE5B600FCE403 /* libOLRabbitMQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOLRabbitMQ.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EED7971ABFE5B600FCE403 /* OLRabbitMQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLRabbitMQ.h; sourceTree = "<group>"; };
 		84EED79F1ABFE5B600FCE403 /* OLRabbitMQ.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OLRabbitMQ.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +67,6 @@
 		84EED7B51ABFE68300FCE403 /* OLRabbitMQOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OLRabbitMQOperation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		84EED7B61ABFE68300FCE403 /* OLRabbitMQSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = OLRabbitMQSocket.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		84EED7B71ABFE68300FCE403 /* OLRabbitMQSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OLRabbitMQSocket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		84EED7BE1ABFE82C00FCE403 /* librabbitmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librabbitmq.a; sourceTree = "<group>"; };
 		84EED7C91ABFE9F900FCE403 /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
 		84EED7CA1ABFE9F900FCE403 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84EED7C21ABFE82C00FCE403 /* librabbitmq.a in Frameworks */,
+				84C0FDBF1AD4F38B00073220 /* rabbitmq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +151,7 @@
 			children = (
 				84EED7C91ABFE9F900FCE403 /* utils.c */,
 				84EED7CA1ABFE9F900FCE403 /* utils.h */,
-				84EED7BE1ABFE82C00FCE403 /* librabbitmq.a */,
+				84C0FDBE1AD4F38B00073220 /* rabbitmq.a */,
 			);
 			path = "rabbitmq-c";
 			sourceTree = "<group>";

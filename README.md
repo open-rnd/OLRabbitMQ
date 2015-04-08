@@ -9,42 +9,47 @@ Objective-C wrapper for rabbitmq-c.
 
 #### Requirements
 
-* linked librabbitmq from folder rabbitmq-c (currently version 2.6.0 for all architectures armv7, arm64, x86_64 and i386)
-
-
+* linked librabbitmq from folder rabbitmq-c (currently version 0.6.1 for all architectures armv7, arm64, x86_64 and i386)
 
 #### Podfile
 
 ```ruby
 platform :ios, '7.0'
-pod "OLRabbitMQ", "~> 1.0.0"
+pod "OLRabbitMQ", "~> 0.0.1"
 ```
 
 ### Usage
 
 #### Create socket AMQP
 ```objective-c
-    OLRabbitMQSocket _socketAMQP = [[OLRabbitMQSocket alloc] initWithIp:<address ip> port:<port ip>];
-    [_socketAMQP createSocketWithVhost:<vhost> login:<login> password:<password> callback:^(BOOL ready, NSError *error) {
-    }];
+OLRabbitMQSocket _socketAMQP = [[OLRabbitMQSocket alloc] initWithIp:<address ip> port:<port>];
+[_socketAMQP createSocketWithVhost:<vhost> login:<login> password:<password> callback:^(BOOL ready, NSError *error) {
+	// your implementation...
+}];
 ```
 
 #### Bind to Exchange
 ```objective-c
-    OLRabbitMQExchange *exchange = [[OLRabbitMQExchange alloc] initWithSocket:<OLRabbitMQSocket instance>];
-    [exchange bindExchange:<exchange string name> routingKey:<exchange routing key string>];
+OLRabbitMQExchange *exchange = [[OLRabbitMQExchange alloc] initWithSocket:<OLRabbitMQSocket instance>];
+[exchange bindExchange:<exchange string name> routingKey:<exchange routing key string>];
 ```
 
 #### Unbind to Exchange
 ```objective-c
-    OLRabbitMQExchange *exchange = [[OLRabbitMQExchange alloc] initWithSocket:<OLRabbitMQSocket instance>];
-    [exchange unbindExchange:<exchange string name> routingKey:<exchange routing key string>];
+OLRabbitMQExchange *exchange = [[OLRabbitMQExchange alloc] initWithSocket:<OLRabbitMQSocket instance>];
+[exchange unbindExchange:<exchange string name> routingKey:<exchange routing key string>];
+```
+
+#### Consume
+```objective-c
+[exchange basicConsume];
 ```
 
 #### Response Operation Queue
 ``` objective-c
-    OLRabbitMQOperation _operationAMQP = [[OLRabbitMQOperation alloc] initWithSocket:<OLRabbitMQSocket instance>];
-    _operationAMQP.delegate = self;
+OLRabbitMQOperation *operation = [[OLRabbitMQOperation alloc] initWithSocket:<OLRabbitMQSocket instance>];
+operation.delegate = self;
+[[NSOperationQueue new] addOperation:operation];
 ```
 
 #### Delegate Operation Queue
