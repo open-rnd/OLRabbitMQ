@@ -9,13 +9,14 @@ Objective-C wrapper for rabbitmq-c.
 
 #### Requirements
 
-* linked librabbitmq from folder rabbitmq-c (currently version 0.6.1 for all architectures armv7, arm64, x86_64 and i386)
+* dependency on Pod 'rabbitmqc' - rabbitmq-c.
+* if you do not use cocopads you need add rabbitmq-c (currently version 0.6.1 for all architectures armv7, arm64, x86_64 and i386)
 
 #### Podfile
 
 ```ruby
 platform :ios, '7.0'
-pod "OLRabbitMQ", "~> 0.0.1"
+pod "OLRabbitMQ", "~> 0.0.2"
 ```
 
 ### Usage
