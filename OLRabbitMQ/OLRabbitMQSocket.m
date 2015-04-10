@@ -17,7 +17,7 @@
  ******************************************************************************/
 
 #import "OLRabbitMQSocket.h"
-#include "amqp_tcp_socket.h"
+#include <amqp_tcp_socket.h>
 
 @interface OLRabbitMQSocket() {
     amqp_connection_state_t conn;

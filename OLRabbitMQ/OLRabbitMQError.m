@@ -17,14 +17,12 @@
  ******************************************************************************/
 
 #import "OLRabbitMQError.h"
-#include "amqp_tcp_socket.h"
-#include "utils.h"
+#include <amqp_tcp_socket.h>
 
 @implementation OLRabbitMQError
 
 + (void)validOLRabbitMQRpcReplayT:(amqp_rpc_reply_t)x success:(void (^)(void))success failure:(void (^)(OLRabbitMQError* connectionError)) failure {
     OLRabbitMQError *errorValid = [OLRabbitMQError error:x];
-    
     if (errorValid.code == OLRabbitMQErrorCodeResponseNormal) {
         success();
     } else {

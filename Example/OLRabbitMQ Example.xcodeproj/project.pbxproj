@@ -13,34 +13,12 @@
 		84C0FD941AD4F21F00073220 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C0FD931AD4F21F00073220 /* Images.xcassets */; };
 		84C0FD971AD4F21F00073220 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C0FD951AD4F21F00073220 /* LaunchScreen.xib */; };
 		84C0FDB21AD4F28700073220 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C0FDAF1AD4F28700073220 /* ViewController.m */; };
-		A927847B1AD50E3B00D6D92E /* libOLRabbitMQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A92784761AD509E500D6D92E /* libOLRabbitMQ.a */; };
+		9C108698763FC26CDD6A102C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E110897C829647A4A2348ED /* libPods.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A92784751AD509E500D6D92E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 84EED7941ABFE5B600FCE403;
-			remoteInfo = OLRabbitMQ;
-		};
-		A92784771AD509E500D6D92E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 84EED79F1ABFE5B600FCE403;
-			remoteInfo = OLRabbitMQTests;
-		};
-		A92784791AD50CB200D6D92E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 84EED7931ABFE5B600FCE403;
-			remoteInfo = OLRabbitMQ;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		3E110897C829647A4A2348ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C7DD63AD6EDAF069DBEACD3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		84C0FD831AD4F21F00073220 /* OLRabbitMQ Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OLRabbitMQ Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C0FD871AD4F21F00073220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C0FD881AD4F21F00073220 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,7 +29,7 @@
 		84C0FD961AD4F21F00073220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		84C0FDAE1AD4F28700073220 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		84C0FDAF1AD4F28700073220 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OLRabbitMQ.xcodeproj; path = ../OLRabbitMQ.xcodeproj; sourceTree = "<group>"; };
+		C354B92F7B20660934F97738 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,19 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A927847B1AD50E3B00D6D92E /* libOLRabbitMQ.a in Frameworks */,
+				9C108698763FC26CDD6A102C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E33B7AD411E0364C1076FC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E110897C829647A4A2348ED /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		629C8E8EF901F0E13382F6DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C7DD63AD6EDAF069DBEACD3 /* Pods.debug.xcconfig */,
+				C354B92F7B20660934F97738 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84C0FD7A1AD4F21F00073220 = {
 			isa = PBXGroup;
 			children = (
-				A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */,
 				84C0FD851AD4F21F00073220 /* OLRabbitMQ Example */,
 				84C0FD841AD4F21F00073220 /* Products */,
+				629C8E8EF901F0E13382F6DD /* Pods */,
+				2E33B7AD411E0364C1076FC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,15 +135,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A92784711AD509E500D6D92E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A92784761AD509E500D6D92E /* libOLRabbitMQ.a */,
-				A92784781AD509E500D6D92E /* OLRabbitMQ.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,14 +142,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C0FDA61AD4F21F00073220 /* Build configuration list for PBXNativeTarget "OLRabbitMQ Example" */;
 			buildPhases = (
+				8DC48C0655FE00CC4BAB9F5A /* Check Pods Manifest.lock */,
 				84C0FD7F1AD4F21F00073220 /* Sources */,
 				84C0FD801AD4F21F00073220 /* Frameworks */,
 				84C0FD811AD4F21F00073220 /* Resources */,
+				44BE26ECDD1EC649D737798B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A927847A1AD50CB200D6D92E /* PBXTargetDependency */,
 			);
 			name = "OLRabbitMQ Example";
 			productName = "OLRabbitMQ Example";
@@ -194,35 +182,12 @@
 			mainGroup = 84C0FD7A1AD4F21F00073220;
 			productRefGroup = 84C0FD841AD4F21F00073220 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A92784711AD509E500D6D92E /* Products */;
-					ProjectRef = A92784701AD509E500D6D92E /* OLRabbitMQ.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				84C0FD821AD4F21F00073220 /* OLRabbitMQ Example */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A92784761AD509E500D6D92E /* libOLRabbitMQ.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOLRabbitMQ.a;
-			remoteRef = A92784751AD509E500D6D92E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A92784781AD509E500D6D92E /* OLRabbitMQ.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OLRabbitMQ.xctest;
-			remoteRef = A92784771AD509E500D6D92E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		84C0FD811AD4F21F00073220 /* Resources */ = {
@@ -237,6 +202,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44BE26ECDD1EC649D737798B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC48C0655FE00CC4BAB9F5A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84C0FD7F1AD4F21F00073220 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -249,14 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A927847A1AD50CB200D6D92E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OLRabbitMQ;
-			targetProxy = A92784791AD50CB200D6D92E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		84C0FD901AD4F21F00073220 /* Main.storyboard */ = {
@@ -313,17 +303,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../rabbitmq-c/include",
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../OLRabbitMQ/";
 			};
 			name = Debug;
 		};
@@ -356,38 +343,35 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../rabbitmq-c/include",
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../OLRabbitMQ/";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		84C0FDA71AD4F21F00073220 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C7DD63AD6EDAF069DBEACD3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "OLRabbitMQ Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		84C0FDA81AD4F21F00073220 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C354B92F7B20660934F97738 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "OLRabbitMQ Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

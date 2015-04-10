@@ -20,8 +20,8 @@
  ******************************************************************************/
 
 #import "ViewController.h"
-#import "OLRabbitMQ/OLRabbitMQ.h"
-
+#import <OLRabbitMQ/OLRabbitMQ.h>
+              
 @interface ViewController () <OLRabbitMQOperationDelegate> {
     NSString *vhost;
     NSString *login;
