@@ -1,4 +1,4 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '7.0'
 
-pod 'OLRabbitMQ', :path => '/Users/tomaszpluciennik/repositories/OLRabbitMQ'
+pod 'OLRabbitMQ', '~> 0.0'
