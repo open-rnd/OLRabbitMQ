@@ -25,7 +25,11 @@
 @interface OLRabbitMQSocket : NSObject
 
 - (instancetype)initWithIp:(NSString *)aIp port:(NSInteger)aPort;
-- (void)createSocketWithVhost:(NSString *)aVhost login:(NSString *)aLogin password:(NSString *)aPassword callback:(void (^)(BOOL ready, NSError*error))callback;
+
+- (OLRabbitMQError *)openWithoutSSL;
+- (OLRabbitMQError *)openWithSSLWithCacert:(NSString *)cacert keypem:(NSString *)key certpem:(NSString *)cert;
+
+- (void)loginVhost:(NSString *)aVhost login:(NSString *)aLogin password:(NSString *)aPassword callback:(void (^)(BOOL ready, NSError*error))callback;
 
 - (BOOL)isReady;
 - (amqp_connection_state_t)conn;

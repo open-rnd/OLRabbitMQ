@@ -55,11 +55,12 @@
     
     NSLog(@"create socket and try connect...");
     OLRabbitMQSocket *socket = [[OLRabbitMQSocket alloc] initWithIp:address_ip port:port];
-    [socket createSocketWithVhost:vhost login:login password:password callback:^(BOOL ready, NSError *error) {
+    [socket openWithoutSSL];
+    [socket loginVhost:vhost login:login password:password callback:^(BOOL ready, NSError *error) {
         
         if (ready) {
             OLRabbitMQExchange *exchange = [[OLRabbitMQExchange alloc] initWithSocket:socket];
-            [exchange bindExchange:@"amq.direct" routingKey:@"test"];
+            [exchange bindExchange:@"test_exchange" routingKey:@"standard_key"];
             
             [exchange basicConsume];
             

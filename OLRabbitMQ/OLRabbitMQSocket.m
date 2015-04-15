@@ -18,6 +18,7 @@
 
 #import "OLRabbitMQSocket.h"
 #include <amqp_tcp_socket.h>
+#include <amqp_ssl_socket.h>
 
 @interface OLRabbitMQSocket() {
     amqp_connection_state_t conn;
@@ -25,12 +26,18 @@
     amqp_bytes_t queuename;
     BOOL ready;
     
+    BOOL ssl_enable;
+    
     NSString *vhost;
     NSString *login;
     NSString *password;
     
     NSString *ip;
     int port;
+    
+    NSString *cacertpem;
+    NSString *keypem;
+    NSString *certpem;
 }
 
 @end
@@ -61,19 +68,16 @@
     return ready;
 }
 
-- (void)createSocketWithVhost:(NSString *)aVhost login:(NSString *)aLogin password:(NSString *)aPassword callback:(void (^)(BOOL ready, NSError*error))callback {
+- (OLRabbitMQError *)openWithoutSSL {
     
-    vhost = aVhost;
-    login = aLogin;
-    password = aPassword;
-    
+    ssl_enable = NO;
     ready = NO;
     conn = amqp_new_connection();
     socket = amqp_tcp_socket_new(conn);
     
     if (!socket) {
         OLRabbitMQError *error = [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect userInfo:@{kOLRabbitMQErrorMessage : @"Error socket"}];
-        return callback(NO, error);
+        return error;
     }
     
     char const *hostname = [ip UTF8String];
@@ -83,6 +87,65 @@
     if ([OLRabbitMQManager logEnabled]) {
         NSLog(@"OLRabbitMQConnection hostname: %@ port: %i", [NSString stringWithCString:hostname encoding:NSUTF8StringEncoding], port);
     }
+    
+    return nil;
+}
+
+- (OLRabbitMQError *)openWithSSLWithCacert:(NSString *)cacert keypem:(NSString *)key certpem:(NSString *)cert {
+    ssl_enable = YES;
+    ready = NO;
+    
+    cacertpem = cacert;
+    keypem = key;
+    certpem = cert;
+    
+    conn = amqp_new_connection();
+    socket = amqp_ssl_socket_new(conn);
+    
+    if (!socket) {
+        OLRabbitMQError *error = [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect userInfo:@{kOLRabbitMQErrorMessage : @"Creating SSL/TLS socket"}];
+        return error;
+    }
+    
+    char const *hostname = [ip UTF8String];
+    int status;
+    
+    status = amqp_ssl_socket_set_cacert(socket, [cacertpem UTF8String]);
+    if (status) {
+        NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
+        return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
+                                       userInfo:@{kOLRabbitMQErrorMessage : @"Setting CA certificate",
+                                                  kOLRabbitMQErrorStatusCode : statusCode}];
+    }
+    
+    status = amqp_ssl_socket_set_key(socket, [certpem UTF8String], [keypem UTF8String]);
+    if (status) {
+        NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
+        return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
+                                       userInfo:@{kOLRabbitMQErrorMessage : @"Setting Client cert key",
+                                                  kOLRabbitMQErrorStatusCode : statusCode}];
+    }
+    
+    status = amqp_socket_open(socket, hostname, port);
+    if (status) {
+        NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
+        return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
+                                       userInfo:@{kOLRabbitMQErrorMessage : @"Opening SSL/TLS connection",
+                                                  kOLRabbitMQErrorStatusCode : statusCode}];
+    }
+    
+    if ([OLRabbitMQManager logEnabled]) {
+        NSLog(@"OLRabbitMQConnection hostname: %@ port: %i", [NSString stringWithCString:hostname encoding:NSUTF8StringEncoding], port);
+    }
+    
+    return nil;
+}
+
+- (void)loginVhost:(NSString *)aVhost login:(NSString *)aLogin password:(NSString *)aPassword callback:(void (^)(BOOL ready, NSError*error))callback {
+    
+    vhost = aVhost;
+    login = aLogin;
+    password = aPassword;
     
     [self loginConnVHost:vhost login:login password:password];
     
@@ -101,7 +164,7 @@
             if (queue.len == 0) {
                 OLRabbitMQError *error = [self closeConnection];
                 callback(NO, error);
-
+                
             }
             
             queuename = queue;
@@ -113,6 +176,7 @@
         OLRabbitMQError *error = [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect userInfo:@{kOLRabbitMQErrorMessage : @"Error connect"}];
         callback(NO, error);
     }];
+
 }
 
 - (OLRabbitMQError *)loginConnVHost:(NSString *)aVhost login:(NSString *)aLogin password:(NSString *)aPassword {

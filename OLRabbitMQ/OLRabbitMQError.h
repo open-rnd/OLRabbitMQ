@@ -25,6 +25,9 @@
 // UserInfo Keys
 #define kOLRabbitMQErrorMessage @"OLRabbitMQ.error.message"
 
+// Error Key Status Code
+#define kOLRabbitMQErrorStatusCode @"OLRabbitMQ.error.statuscode"
+
 typedef NS_ENUM(NSUInteger, OLRabbitMQErrorCode) {
     OLRabbitMQErrorCodeResponseNormal,
     OLRabbitMQErrorCodeResponseNone,
