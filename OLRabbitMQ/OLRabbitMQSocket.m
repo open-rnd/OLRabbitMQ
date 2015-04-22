@@ -102,16 +102,25 @@
     conn = amqp_new_connection();
     socket = amqp_ssl_socket_new(conn);
     
+    
     if (!socket) {
+        NSLog(@"creating SSL/TLS socket");
+    }
+
+    int status = 0;
+    char const *hostname = [ip UTF8String];
+
+    status = amqp_socket_open(socket, hostname, port);
+    
+    if (socket != 0) {
         OLRabbitMQError *error = [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect userInfo:@{kOLRabbitMQErrorMessage : @"Creating SSL/TLS socket"}];
         return error;
     }
     
-    char const *hostname = [ip UTF8String];
-    int status;
     
+    amqp_set_initialize_ssl_library(1);
     status = amqp_ssl_socket_set_cacert(socket, [cacertpem UTF8String]);
-    if (status) {
+    if (status != 0) {
         NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
         return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
                                        userInfo:@{kOLRabbitMQErrorMessage : @"Setting CA certificate",
@@ -119,15 +128,16 @@
     }
     
     status = amqp_ssl_socket_set_key(socket, [certpem UTF8String], [keypem UTF8String]);
-    if (status) {
+    if (status != 0) {
         NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
         return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
                                        userInfo:@{kOLRabbitMQErrorMessage : @"Setting Client cert key",
                                                   kOLRabbitMQErrorStatusCode : statusCode}];
     }
     
+    amqp_ssl_socket_set_verify(socket, 0);
     status = amqp_socket_open(socket, hostname, port);
-    if (status) {
+    if (status != 0) {
         NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
         return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
                                        userInfo:@{kOLRabbitMQErrorMessage : @"Opening SSL/TLS connection",
@@ -184,7 +194,7 @@
     const char *_login = [aLogin cStringUsingEncoding:NSUTF8StringEncoding];
     const char *_passowrd = [aPassword cStringUsingEncoding:NSUTF8StringEncoding];
     
-    amqp_rpc_reply_t loginRPC = amqp_login(conn, _vhost, 0, 131072, 0, AMQP_SASL_METHOD_PLAIN, _login, _passowrd);
+    amqp_rpc_reply_t loginRPC = amqp_login(conn, _vhost, 0, 131072, 30, AMQP_SASL_METHOD_PLAIN, _login, _passowrd);
     __block OLRabbitMQError *error;
     [OLRabbitMQError validOLRabbitMQRpcReplayT:loginRPC success:^{
         

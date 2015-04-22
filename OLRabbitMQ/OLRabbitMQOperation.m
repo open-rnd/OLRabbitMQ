@@ -52,7 +52,7 @@
     _runLoop = YES;
     /* OLRabbitMQ timeout to 0, no waitxing at all */
     struct timeval tv = { .tv_sec = 1,
-        .tv_usec = 0 };
+                          .tv_usec = 0 };
     {
         _running = YES;
         while (_runLoop) {
@@ -63,7 +63,13 @@
             amqp_maybe_release_buffers(_socket.conn);
             res = amqp_consume_message(_socket.conn, &envelope, &tv, 0);
             
-            if (AMQP_RESPONSE_NORMAL == res.reply_type) {
+            if (AMQP_RESPONSE_NORMAL != res.reply_type) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    if (_delegate && [_delegate respondsToSelector:@selector(amqpError:)]) {
+                        [_delegate amqpError:[NSError errorWithDomain:kOLRabbitMQErrorDomain code:(int)res.reply_type userInfo:nil]];
+                    }
+                }];
+            } else {
                 NSString *routingKey = [[NSString alloc] initWithBytes:envelope.routing_key.bytes length:envelope.routing_key.len encoding:NSUTF8StringEncoding];
                 NSData *data = [NSData dataWithBytes:envelope.message.body.bytes length:envelope.message.body.len];
                 amqp_destroy_envelope(&envelope);

@@ -30,6 +30,7 @@
 @protocol OLRabbitMQOperationDelegate <NSObject>
 
 - (void)amqpResponse:(NSData *)data routingKey:(NSString *)routingKey;
+- (void)amqpError:(id)error;
 
 @end
 
@@ -42,4 +43,3 @@
 - (instancetype)initWithSocket:(OLRabbitMQSocket *)aSocket;
 
 @end
-
