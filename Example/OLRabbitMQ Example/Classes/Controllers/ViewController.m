@@ -21,6 +21,7 @@
 
 #import "ViewController.h"
 #import <OLRabbitMQ/OLRabbitMQ.h>
+#import <unistd.h>
               
 @interface ViewController () <OLRabbitMQOperationDelegate> {
     NSString *vhost;
@@ -42,12 +43,15 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [OLRabbitMQManager setLogEnabled:YES];
-    [self initRabbitSocket];
+    
+    char hostname[256];
+    gethostname(&hostname[0], 256);
+    [self initRabbitSocketWithSSL:true];
 }
 
-- (void)initRabbitSocket {
+- (void)initRabbitSocketWithSSL:(BOOL)ssl {
     address_ip = @"localhost";
-    port = 5672;
+    port = 5671;
     
     vhost = @"/";
     login = @"guest";
@@ -55,12 +59,23 @@
     
     NSLog(@"create socket and try connect...");
     OLRabbitMQSocket *socket = [[OLRabbitMQSocket alloc] initWithIp:address_ip port:port];
-    [socket openWithoutSSL];
+    
+    if (ssl) {
+        NSString *path_cacert = [[NSBundle mainBundle] pathForResource:@"cacert" ofType:@"pem"];
+        NSString *path_keypem = [[NSBundle mainBundle] pathForResource:@"rabbit-client.key" ofType:@"pem"];
+        NSString *path_certpem = [[NSBundle mainBundle] pathForResource:@"rabbit-client.cert" ofType:@"pem"];
+        OLRabbitMQError *error = [socket openWithSSLWithCacert:path_cacert keypem:path_keypem certpem:path_certpem];
+        if (error) {
+            return;
+        }
+    } else {
+        [socket openWithoutSSL];
+    }
     [socket loginVhost:vhost login:login password:password callback:^(BOOL ready, NSError *error) {
         
         if (ready) {
             OLRabbitMQExchange *exchange = [[OLRabbitMQExchange alloc] initWithSocket:socket];
-            [exchange bindExchange:@"test_exchange" routingKey:@"standard_key"];
+            [exchange bindExchange:@"amq.direct" routingKey:@"test"];
             
             [exchange basicConsume];
             
@@ -75,6 +90,8 @@
         }
     }];
 }
+
+
 
 - (void)amqpResponse:(NSData *)data routingKey:(NSString *)routingKey {
     NSLog(@"routingKey: %@, data: %@", routingKey, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);

@@ -195,17 +195,8 @@
     const char *_passowrd = [aPassword cStringUsingEncoding:NSUTF8StringEncoding];
     
     amqp_rpc_reply_t loginRPC = amqp_login(conn, _vhost, 0, 131072, 30, AMQP_SASL_METHOD_PLAIN, _login, _passowrd);
-    __block OLRabbitMQError *error;
-    [OLRabbitMQError validOLRabbitMQRpcReplayT:loginRPC success:^{
-        
-        if ([OLRabbitMQManager logEnabled]) {
-            NSLog(@"OLRabbitMQ login connection vhost: %@ [OK]", vhost);
-        }
-        
-    } failure:^(OLRabbitMQError *connectionError) {
-        error = [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorMessage code:OLRabbitMQErrorCCLogin userInfo:@{kOLRabbitMQErrorMessage : @"Problem with Login"}];
-    }];
-    return error;
+    OLRabbitMQError *errorValid = [OLRabbitMQError error:loginRPC];
+    return errorValid;
 }
 
 
