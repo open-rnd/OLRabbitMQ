@@ -109,33 +109,29 @@
 
     int status = 0;
     char const *hostname = [ip UTF8String];
-
-    status = amqp_socket_open(socket, hostname, port);
-    
-    if (socket != 0) {
-        OLRabbitMQError *error = [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect userInfo:@{kOLRabbitMQErrorMessage : @"Creating SSL/TLS socket"}];
-        return error;
-    }
-    
     
     amqp_set_initialize_ssl_library(1);
-    status = amqp_ssl_socket_set_cacert(socket, [cacertpem UTF8String]);
-    if (status != 0) {
-        NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
-        return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
-                                       userInfo:@{kOLRabbitMQErrorMessage : @"Setting CA certificate",
-                                                  kOLRabbitMQErrorStatusCode : statusCode}];
+    if (cacert) {
+        status = amqp_ssl_socket_set_cacert(socket, [cacertpem UTF8String]);
+        if (status != 0) {
+            NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
+            return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
+                                           userInfo:@{kOLRabbitMQErrorMessage : @"Setting CA certificate",
+                                                      kOLRabbitMQErrorStatusCode : statusCode}];
+        }
     }
     
-    status = amqp_ssl_socket_set_key(socket, [certpem UTF8String], [keypem UTF8String]);
-    if (status != 0) {
-        NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
-        return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
-                                       userInfo:@{kOLRabbitMQErrorMessage : @"Setting Client cert key",
-                                                  kOLRabbitMQErrorStatusCode : statusCode}];
-    }
     
-    amqp_ssl_socket_set_verify(socket, 0);
+    if (key && cert) {
+        status = amqp_ssl_socket_set_key(socket, [certpem UTF8String], [keypem UTF8String]);
+        if (status != 0) {
+            NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
+            return [OLRabbitMQError errorWithDomain:kOLRabbitMQErrorDomain code:OLRabbitMQErrorCCConnect
+                                           userInfo:@{kOLRabbitMQErrorMessage : @"Setting Client cert key",
+                                                      kOLRabbitMQErrorStatusCode : statusCode}];
+        }
+    }
+        
     status = amqp_socket_open(socket, hostname, port);
     if (status != 0) {
         NSString *statusCode = [[NSString alloc] initWithFormat:@"%i", status];
