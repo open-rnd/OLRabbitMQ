@@ -14,9 +14,6 @@
 		84C0FD971AD4F21F00073220 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C0FD951AD4F21F00073220 /* LaunchScreen.xib */; };
 		84C0FDB21AD4F28700073220 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C0FDAF1AD4F28700073220 /* ViewController.m */; };
 		9C108698763FC26CDD6A102C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E110897C829647A4A2348ED /* libPods.a */; };
-		A9AA81151AE1092D0084AA8F /* rabbit-client.cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = A9AA81121AE1092D0084AA8F /* rabbit-client.cert.pem */; };
-		A9AA81161AE1092D0084AA8F /* rabbit-client.key.pem in Resources */ = {isa = PBXBuildFile; fileRef = A9AA81131AE1092D0084AA8F /* rabbit-client.key.pem */; };
-		A9AA81171AE1092D0084AA8F /* cacert.pem in Resources */ = {isa = PBXBuildFile; fileRef = A9AA81141AE1092D0084AA8F /* cacert.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +29,6 @@
 		84C0FD961AD4F21F00073220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		84C0FDAE1AD4F28700073220 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		84C0FDAF1AD4F28700073220 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A9AA81121AE1092D0084AA8F /* rabbit-client.cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "rabbit-client.cert.pem"; path = "OLRabbitMQ Example/rabbit-client.cert.pem"; sourceTree = "<group>"; };
-		A9AA81131AE1092D0084AA8F /* rabbit-client.key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "rabbit-client.key.pem"; path = "OLRabbitMQ Example/rabbit-client.key.pem"; sourceTree = "<group>"; };
-		A9AA81141AE1092D0084AA8F /* cacert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cacert.pem; path = "OLRabbitMQ Example/cacert.pem"; sourceTree = "<group>"; };
 		C354B92F7B20660934F97738 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,9 +64,6 @@
 		84C0FD7A1AD4F21F00073220 = {
 			isa = PBXGroup;
 			children = (
-				A9AA81121AE1092D0084AA8F /* rabbit-client.cert.pem */,
-				A9AA81131AE1092D0084AA8F /* rabbit-client.key.pem */,
-				A9AA81141AE1092D0084AA8F /* cacert.pem */,
 				84C0FD851AD4F21F00073220 /* OLRabbitMQ Example */,
 				84C0FD841AD4F21F00073220 /* Products */,
 				629C8E8EF901F0E13382F6DD /* Pods */,
@@ -203,12 +194,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9AA81171AE1092D0084AA8F /* cacert.pem in Resources */,
 				84C0FD921AD4F21F00073220 /* Main.storyboard in Resources */,
 				84C0FD971AD4F21F00073220 /* LaunchScreen.xib in Resources */,
-				A9AA81151AE1092D0084AA8F /* rabbit-client.cert.pem in Resources */,
 				84C0FD941AD4F21F00073220 /* Images.xcassets in Resources */,
-				A9AA81161AE1092D0084AA8F /* rabbit-client.key.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
