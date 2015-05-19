@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "OLRabbitMQ"
-  s.version      = "0.1.5"
+  s.version      = "0.1.2"
   s.summary      = "Objective-C wrapper for librabbitmq-c."
   s.homepage     = "https://github.com/open-rnd/OLRabbitMQ"
   s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
